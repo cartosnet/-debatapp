@@ -4,6 +4,7 @@
     <h1><%= @debat.description %></h1>
     <p>Il se termine le </p>
     <h2><%= @debat.due_date %></h2>
+    <%= render 'votes/form', debat: @debat, vote: @vote %>
   </div>
 </div>
 

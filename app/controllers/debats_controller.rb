@@ -3,6 +3,6 @@ class DebatsController < ApplicationController
   def show
   	@debat = Debat.last
   	@votes = @debat.votes
-  	# @comments = @debat.comments
+    @vote = Vote.new 
   end
 end
