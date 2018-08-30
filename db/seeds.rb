@@ -15,7 +15,7 @@ joseph = User.create!( email: 'joseph@gmail.com', password: 'azerty', firstname:
 
 first_debat = Debat.create!(
 	title: "first debat",
-	description: "description du super debat",
+	description: "Pensez vous que Joseph est Portuguais ?",
 	due_date: Date.today + 10 
 	)
 
@@ -24,5 +24,5 @@ first_debat = Debat.create!(
 # 					])
 
 
-Vote.create!( value: true, description: "description du vote de matthieu", debat_id: first_debat.id, user_id: matthieu.id)
-Vote.create!( value: false, description: "description du vote de joseph", debat_id: first_debat.id, user_id: joseph.id)
+Vote.create!( value: true, description: "Oui moi je pense qu'il est vraiment ", debat_id: first_debat.id, user_id: matthieu.id)
+Vote.create!( value: false, description: "Allez vous faire ......", debat_id: first_debat.id, user_id: joseph.id)

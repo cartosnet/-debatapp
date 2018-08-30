@@ -2,13 +2,12 @@ class VotesController < ApplicationController
 
   def create
     @debat = Debat.find(params[:debat_id])
+    @votes = Vote.all
     @vote = Vote.new(vote_params)
     @vote.debat = @debat
-    if @vote.save
-      redirect_to debat_path(@debat)
-    else
-      render 'debats/show'
-    end
+    
+      redirect_to root_path
+   
   end
 
   private
