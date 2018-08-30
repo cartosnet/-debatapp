@@ -17,8 +17,12 @@ ActiveRecord::Schema.define(version: 2018_08_29_191753) do
 
   create_table "comments", force: :cascade do |t|
     t.text "content"
+    t.bigint "vote_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_comments_on_user_id"
+    t.index ["vote_id"], name: "index_comments_on_vote_id"
   end
 
   create_table "debats", force: :cascade do |t|
@@ -46,8 +50,16 @@ ActiveRecord::Schema.define(version: 2018_08_29_191753) do
   create_table "votes", force: :cascade do |t|
     t.boolean "value"
     t.text "description"
+    t.bigint "debat_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["debat_id"], name: "index_votes_on_debat_id"
+    t.index ["user_id"], name: "index_votes_on_user_id"
   end
 
+  add_foreign_key "comments", "users"
+  add_foreign_key "comments", "votes"
+  add_foreign_key "votes", "debats"
+  add_foreign_key "votes", "users"
 end
