@@ -1,5 +1,5 @@
 <%= simple_form_for([ debat, vote ]) do |form| %>
-  <%= form.input :value, as: :radio_buttons, collection: [ "Oui complétement", "Non je pense pas"] %>
+  <%= form.input :value, as: :radio_buttons, collection: [true, false], wrapper: :vertical_collection_inline %>
   <%= form.input :description, as: :text %>
   <%= form.button :submit %>
 <% end %>
