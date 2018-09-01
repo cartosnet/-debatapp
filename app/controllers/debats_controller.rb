@@ -9,5 +9,5 @@ class DebatsController < ApplicationController
   	@debat = Debat.find(params[:id])
     @vote = Vote.new 
     @votes = @debat.votes
-  end
+   end
 end

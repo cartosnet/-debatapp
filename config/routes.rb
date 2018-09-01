@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :debats, only: :show do
+  resources :debats, only: [ :show, :index ] do
     resources :votes, only: :create do
       resources :comments, only: :create
       end

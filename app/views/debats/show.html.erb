@@ -12,18 +12,13 @@
   <div class="row">
 <h2>Votes Results</h2>
 
-	<% @votes.each do |vote| %>
-	
-		<div class="vote">
 
-		
-			<img class="<%= vote.value ? "avatar-blue" : "avatar-red" %> img-circle" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan"> 		
-			<div class="vote-name">
-				<h3><%= vote.user.firstname %></h3>
-				<p><%= vote.created_at.strftime("Publié le %m/%d/%Y")%></p>
-			</div>
-			<div class="vote-body">
-				<p><%= vote.description %></p>
-			</div>
-		</div>
-	<% end %>
+<div id="debats">
+  <% if @debat.votes.blank? %>
+    Be the first to vote for <%= @debat.title %>
+  <% else %>
+    <% @debat.votes.each do |vote| %>
+      <%= render 'votes/show', vote: vote %>
+    <% end %>
+  <% end %>
+</div>

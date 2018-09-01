@@ -1,0 +1,10 @@
+<div class="vote">
+	<img class="<%= vote.value ? "avatar-blue" : "avatar-red" %> img-circle" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan"> 	
+	<div class="vote-name">
+	<h3><%= vote.user.firstname %></h3>
+	<p><%= vote.created_at.strftime("Publié le %m/%d/%Y")%></p>
+	</div>
+	<div class="vote-body">
+		<p><%= vote.description %></p>
+	</div>
+</div>
