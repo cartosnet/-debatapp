@@ -1,5 +1,7 @@
 <div class="vote">
-	<img class="<%= vote.value ? "avatar-blue" : "avatar-red" %> img-circle" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan"> 	
+	<% avatar_url = vote.user.facebook_picture_url || "http://placehold.it/30x30" %>
+	<%= image_tag avatar_url, class: "avatar-blue"  %>
+	 	
 	<div class="vote-name">
 	<h3><%= vote.user.firstname %></h3>
 	<p><%= vote.created_at.strftime("Publié le %m/%d/%Y")%></p>
@@ -8,3 +10,6 @@
 		<p><%= vote.description %></p>
 	</div>
 </div>
+
+
+
