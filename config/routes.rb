@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+
+
+  get 'privacy', to: "pages#privacy"
+  get 'about', to: "pages#about"
+  get 'blog', to: "pages#blog"
+
   resources :debats, only: [ :show, :index ] do
     resources :votes, only: :create do
       resources :comments, only: :create
