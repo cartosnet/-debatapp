@@ -1,6 +1,7 @@
 <div class="vote">
 	<% avatar_url = vote.user.facebook_picture_url || "http://placehold.it/30x30" %>
-	<%= image_tag avatar_url, class: "avatar-blue"  %>
+	<% css_class = vote.value ? "avatar-blue" : "avatar-red" %>
+	<%= image_tag avatar_url, class: "#{css_class}"  %>
 	 	
 	<div class="vote-name">
 	<h3><%= vote.user.firstname %></h3>

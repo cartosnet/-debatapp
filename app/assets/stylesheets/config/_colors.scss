@@ -1,10 +1,24 @@
 // Define variables for your color scheme
 
-// For example:
+
+
+
+$bg_color: #7DCDCD;
+$text_color: #100e14; // dark-grey
+$light_text_color: #e5e5e5;  // light grey
+
+$color_1: #fd7827; // couleur chaude
+$color_2: #E2FAFA; // couleur froide
+$light_color: #E2FAFA;
+
+
+// Scheme
+$brand-color: $color_1;
+
 $red: #EE5F5B;
 $blue: #469AE0;
 $yellow: #FDB631;
 $orange: #E67E22;
 $green: #32B796;
-$gray: #000000;
+$gray: #100e14;
 $light-gray: #F4F4F4;

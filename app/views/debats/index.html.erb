@@ -1,8 +1,11 @@
 
-<h1>Debats</h1>
 
-<ul>
-  <% @debats.each do |debat| %>
-    <li><%= link_to debat.title, debat_path(debat) %></li>
-  <% end %>
-</ul>
+
+<div class="container">
+	<h1>Debats</h1> 
+	<ul>
+	  <% @debats.each do |debat| %>
+	    <li><%= link_to debat.title, debat_path(debat) %></li>
+	  <% end %>
+	</ul>
+</div>
